@@ -1,0 +1,261 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: PT Sans, pt-sans-regular;
+    background-color: #ffffff;
+    color: #333;
+    line-height: 1.6;
+    background-image: url('bg.png');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed; /* Agrega esta línea */
+  }
+
+  /* Encabezado */
+  header {
+    background-color: rgba(255, 255, 255, 0.426);
+    padding: 20px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+  }
+  
+  .header-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  h1 {
+    font-size: 24px;
+    color: #333;
+  }
+  
+  .social-links a {
+    color: #333;
+    text-decoration: none;
+    margin-right: 15px;
+    font-size: 18px;
+    transition: color 0.3s;
+  }
+  
+  .social-links a:hover {
+    color: #ef66ef;
+  }
+  
+  /* Menú */
+  .menu {
+    width: 90%;
+    max-width: 600px;
+    margin: auto;
+  }
+  
+  .menu-section {
+    margin-bottom: 30px;
+  }
+  
+  h2 {
+    font-size: 22px;
+    color: #555;
+    margin-bottom: 15px;
+    text-align: center;
+    text-decoration: none;
+
+  }
+  
+  .menu-item {
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    padding: 15px;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+    cursor: pointer;
+    position: relative;
+  }
+  
+  .menu-item:hover {
+    transform: scale(1.02);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.1);
+  }
+  
+  h3 {
+    font-size: 18px;
+    /* color: #007bff; */
+    font-size: 25px;
+    cursor: pointer;
+    transition: color 0.3s;
+  }
+  
+  h3:hover {
+    color: #2b2b2b;
+  }
+  
+  .price {
+    font-size: 16px;
+    font-weight: bold;
+    color: #333;
+    margin-top: 10px;
+    display: block;
+  }
+  
+  /* Dropdown de imágenes */
+  .dropdown-content {
+    display: none;
+    margin-top: 15px;
+    animation: fadeIn 0.5s ease forwards;
+  }
+  
+  .menu-item img {
+    width: 100%;
+    max-width: 100%;
+    border-radius: 8px;
+  }
+  
+  /* Animaciones */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+  /* Estilos de transición */
+  .menu-item,
+  .dropdown-content {
+    transition: max-height 0.4s ease;
+  }
+  
+  /* Mostrar dropdown */
+  .menu-item.active .dropdown-content {
+    display: block;
+   
+  }
+
+  .menu-item.active {
+    background-color: #edf6fb;
+  }
+  
+  /* F/ FONT //// */
+
+  .pt-sans-regular {
+    font-family: "PT Sans", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+  .pt-sans-bold {
+    font-family: "PT Sans", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+  }
+  
+  .pt-sans-regular-italic {
+    font-family: "PT Sans", sans-serif;
+    font-weight: 400;
+    font-style: italic;
+  }
+  
+  .pt-sans-bold-italic {
+    font-family: "PT Sans", sans-serif;
+    font-weight: 700;
+    font-style: italic;
+  }
+  
+
+.card {
+  height: 340px;
+  background-color: #fff;
+  border-radius: 20px;
+  position: relative;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.card .offer {
+  width: 150px;
+  height: 40px;
+  background-color: red;
+  position: absolute;
+  top: 28px;
+  left: -14px;
+  border-radius: 20px;
+  border-bottom-left-radius: 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 15px;
+  font-weight: 700;
+  color: #fff
+}
+
+.card span:before {
+  position: absolute;
+  content: '';
+  background-color: red;
+  height: 30px;
+  width: 17px;
+  top: 20px;
+  left: 0px;
+  border-radius: 10px;
+  z-index: -10
+}
+
+.card span:after {
+  position: absolute;
+  content: '';
+  background-color: #d70303;
+  height: 30px;
+  width: 17px;
+  top: 30px;
+  left: 0px;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 20px;
+  z-index: -10
+}
+
+.card .item-image {
+  /* width: 900%; */
+  height: 200px;
+  overflow: hidden;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px
+}
+
+.card .item-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover
+}
+
+.item-content {
+  padding: 10px
+}
+
+.item-content h3 {
+  font-size: 20px
+}
+
+.item-content p {
+  font-size: 15px;
+  font-weight: 500
+}
+
+.item-price {
+  margin-top: 10px;
+  display: flex;
+  justify-content: space-between;
+  font-weight: 900;
+}
+
+.menu-section {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
